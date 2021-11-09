@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 const Loader = (props) => {
-    const [node] = useState(document.creatElement("div"));
+    const [node] = useState(document.createElement("div"));
     const loader = document.querySelector('#loader');
 
     useEffect(() => {
