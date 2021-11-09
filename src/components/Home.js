@@ -22,14 +22,18 @@ const Home = (props) => {
       {isValidSession() ? (
         <Redirect to="/dashboard" />
       ) : (
-        <div className="login">
-          <Header />
-          {sessionExpired && (
-            <Alert variant="info">Session expired. Please login again.</Alert>
-          )}
-          <Button variant="info" type="submit" onClick={handleLogin}>
-            Login to spotify
-          </Button>
+        <div className="row justify-content-center">
+          <div className="col-12 login">
+            <Header />
+            {sessionExpired && (
+              <Alert variant="spotify">Session expired. Please login again.</Alert>
+            )}
+            </div>
+            <div className="col-12 login mt-5" >
+            <Button variant="spotify" type="submit" onClick={handleLogin}>
+              Login to spotify
+            </Button>
+          </div>
         </div>
       )}
     </React.Fragment>

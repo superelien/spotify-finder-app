@@ -75,7 +75,7 @@ const SearchResult = (props) => {
       {!_.isEmpty(result[selectedCategory]) &&
         !_.isEmpty(result[selectedCategory].next) && (
           <div className="load-more" onClick={() => loadMore(selectedCategory)}>
-            <Button variant="info" type="button">
+            <Button variant="spotify" type="button">
               Load More
             </Button>
           </div>

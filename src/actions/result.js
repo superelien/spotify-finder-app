@@ -38,22 +38,22 @@ export const initiateGetResult = (searchTerm) => {
         searchTerm
       )}&type=album,playlist,artist`;
       const result = await get(API_URL);
-      console.log(result);
+      // console.log(result);
       const { albums, artists, playlists } = result;
       dispatch(setAlbums(albums));
       dispatch(setArtists(artists));
       return dispatch(setPlayList(playlists));
     } catch (error) {
-      console.log('error', error);
+      // console.log('error', error);
     }
   };
 };
 export const initiateLoadMoreAlbums = (url) => {
   return async (dispatch) => {
     try {
-      console.log('url', url);
+      // console.log('url', url);
       const result = await get(url);
-      console.log('categoriess', result);
+      // console.log('categoriess', result);
       return dispatch(addAlbums(result.albums));
     } catch (error) {
       console.log('error', error);
@@ -63,9 +63,9 @@ export const initiateLoadMoreAlbums = (url) => {
 export const initiateLoadMoreArtists = (url) => {
   return async (dispatch) => {
     try {
-      console.log('url', url);
+      // console.log('url', url);
       const result = await get(url);
-      console.log('categoriess', result);
+      // console.log('categoriess', result);
       return dispatch(addArtists(result.artists));
     } catch (error) {
       console.log('error', error);
@@ -75,9 +75,9 @@ export const initiateLoadMoreArtists = (url) => {
 export const initiateLoadMorePlaylist = (url) => {
   return async (dispatch) => {
     try {
-      console.log('url', url);
+      // console.log('url', url);
       const result = await get(url);
-      console.log('categoriess', result);
+      // console.log('categoriess', result);
       return dispatch(addPlaylist(result.playlists));
     } catch (error) {
       console.log('error', error);

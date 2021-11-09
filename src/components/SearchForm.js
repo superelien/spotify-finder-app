@@ -17,9 +17,9 @@ const SearchForm = (props) => {
         }
       };
     return(
-        <div>
+        <div className="row justify-content-center mt-5" >
+            <div className="col-md-6 text-center">
             <Form onSubmit={ handleSearch }>
-                {errorMsg && <p className="error">{errorMsg}</p>}
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Enter Search term</Form.Label>
                     <Form.Control
@@ -32,10 +32,12 @@ const SearchForm = (props) => {
                         />
 
                 </Form.Group>
-                <Button variant="info" type="submit">
+                <Button variant="spotify" type="submit">
                     Find
                 </Button>
+                {errorMsg && <p className="error">{errorMsg}</p>}
             </Form>
+            </div>
         </div>
     );
 };

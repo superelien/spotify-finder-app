@@ -1,3 +1,9 @@
+:root{
+  --green-spotify: #1DB954;
+  --black-spotify: #191414;
+  --generic-grey: #75787d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +14,30 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f3f4f6;
-  font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--black-spotify);
+  font-family: 'Helvetica Neue', 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Arial, sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
-  color: #778298;
+  color: var(--generic-grey);
+}
+
+a{
+  color: #fff;
+}
+
+a:hover, a:focus{
+  color: var(--green-spotify);
+  text-decoration:none;
 }
 
 .btn {
   letter-spacing: 1px;
+}
+
+.btn-spotify{
+  background-color: var(--green-spotify);
+  color: #fff;
 }
 
 .login {
@@ -49,7 +69,8 @@ body {
 }
 
 .active {
-  border: 2px solid #566273;
+  background-color:#fff ;
+  border: 2px solid var(--generic-grey);
 }
 
 .loading {
@@ -123,7 +144,7 @@ body {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #778298;
+  color: var( --green-spotify );
 }
 
 .search-buttons .btn:focus {
@@ -140,7 +161,9 @@ body {
 
 .card {
   margin: 1rem;
-  box-shadow: 0 2px 7px 3px #949ca5;
+  background-color:rgb(242, 242, 242);
+  color: var(--generic-grey);
+  /* box-shadow: 0 2px 7px 3px var( --green-spotify ); */
 }
 
 .card .card-image-link {

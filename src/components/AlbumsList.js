@@ -9,7 +9,7 @@ const AlbumList = ({ albums }) => {
             <div className="albums">
                 {albums.items.map((album, index) => {
                     return (
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                             <Card style={{ width: '18rem' }}>
                                 <a
                                     target="_blank"
